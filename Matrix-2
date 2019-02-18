@@ -1,3 +1,6 @@
-Test0= diag(3, 5, 5)
-Test1= matrix(c(0, 1, 1, 1, 1), nrow=1)
-Test2= matrix(0,nrow=5, ncol=1)
+A= diag(3, 5, 5) #simply make a 3 diagonal matrix 
+B= diag(0, 5, 5) #simply make a 0 diagonal matrix
+C= sweep(B, 1, c(1,0,0,0,0), "+") # Using sweep function I added 1 to first row
+D= sweep(B, 2, c(2,0,0,0,0), "+") # Using sweep function I added 2 to first column
+E= C+D 
+F= E+A #I didn't know how to subtract only one cell in matrix and also I couldn't find any hint in our resources to do such operation
